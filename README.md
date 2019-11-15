@@ -1,4 +1,4 @@
-# counter_bloc
+# scoreboard_bloc
 
 A new Flutter project.
 
