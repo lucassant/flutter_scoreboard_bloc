@@ -2,29 +2,33 @@ import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:rxdart/rxdart.dart';
 
 class CounterBloc extends BlocBase {
-  int initialCount = 0;
+  int initialCountOne = 0;
+  int initialCountTwo = 0;
 
-  BehaviorSubject<int> _counter;
+  BehaviorSubject<int> _teamOneCounter, _teamTwoCounter;
 
-  CounterBloc({this.initialCount}) {
-    _counter = BehaviorSubject<int>.seeded(this.initialCount);
+  CounterBloc({this.initialCountOne, this.initialCountTwo}) {
+    _teamOneCounter = BehaviorSubject<int>.seeded(this.initialCountOne);
+    _teamTwoCounter = BehaviorSubject<int>.seeded(this.initialCountTwo);
   }
 
-  Observable<int> get counterObservable => _counter.stream;
+  Observable<int> get teamOneObs => _teamOneCounter.stream;
+  Observable<int> get teamTwoObs => _teamTwoCounter.stream;
 
-  increment() {
-    initialCount++;
-    _counter.sink.add(initialCount);
+  incrementTeamOne() {
+    initialCountOne++;
+    _teamOneCounter.sink.add(initialCountOne);
   }
 
-  decrement() {
-    initialCount--;
-    _counter.sink.add(initialCount);
+  incrementTeamTwo() {
+    initialCountTwo++;
+    _teamTwoCounter.sink.add(initialCountTwo);
   }
 
   @override
   void dispose() {
-    _counter.close();
+    _teamOneCounter.close();
+    _teamTwoCounter.close();
     super.dispose();
   }
 }
