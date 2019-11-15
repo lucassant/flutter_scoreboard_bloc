@@ -1,6 +1,6 @@
 # scoreboard_bloc
 
-![Scoreboard Screen](https://github.com/lucassant/flutter_scoreboard_bloc/blob/master/images/home_screen.jpg)
+![Scoreboard Screen](https://github.com/lucassant/flutter_scoreboard_bloc/blob/master/images/home_screen.png)
 
 
 ## Getting Started
