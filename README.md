@@ -1,6 +1,7 @@
 # scoreboard_bloc
 
-A new Flutter project.
+![Scoreboard Screen](https://github.com/lucassant/flutter_scoreboard_bloc/blob/master/images/home_screen.jpg)
+
 
 ## Getting Started
 
